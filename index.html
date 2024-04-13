@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tax-Calculator</title>
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body>
+  <div id="main">
+    <p>Tax Calculator</p>
+    <div id="cnt-one">
+
+      <div class="outer_flex">
+        <div class="inner_flex">
+          <div class="text">
+            Enter gross annual income
+          </div>
+          <div class="svg1">
+            <img src="asset/questionmark.svg" alt="">
+            <span class="tooltip">Gross annual income is your total salary in a year before any deductions.</span>
+          </div>
+        </div>
+        <div class="input">
+          <input type="text" name="" id="gross" placeholder="Enter gross annual income">
+          <div class="error">
+            <img src="asset/Error.svg" alt="" id="GI-err">
+            <span class="tooltip" id="GI-tt">Please enter numbers only</span>
+          </div>
+        </div>
+      </div>
+      <div class="outer_flex">
+        <div class="inner_flex">
+          <div class="text">
+            Enter extra Income
+          </div>
+          <div class="svg1">
+            <img src="asset/questionmark.svg" alt="">
+            <span class="tooltip">Extra Income is your income from some incentives or bonues not the part of your
+              salary</span>
+          </div>
+        </div>
+        <div class="input">
+          <input type="text" name="" id="Extra" placeholder="Enter extra Income from other sources">
+          <div class="error">
+            <img src="asset/Error.svg" alt="" id="EI-err">
+            <span class="tooltip" id="EI-tt">Please enter numbers only</span>
+          </div>
+        </div>
+      </div>
+      <div class="outer_flex">
+        <div class="inner_flex">
+          <div class="text">
+            Enter age group
+          </div>
+          <div class="svg1">
+            <img src="asset/questionmark.svg" alt="">
+            <span class="tooltip">Choose which age group you belongs to </span>
+
+          </div>
+        </div>
+        <div class="input">
+          <select name="" id="age">
+            <option value="0"></option>
+            <option value="0" disabled>choose age group</option>
+            <option value="jbbhj">&lt;40</option>
+            <option value="0"> ≥ 40 & < 60</option>
+            <option value="0">≥ 60</option>
+          </select>
+          <div class="age-error">
+            <img src="asset/Error.svg" alt="" Id="age-err">
+            <span class="age-tooltip"> input field is mandatory</span>
+          </div>
+        </div>
+      </div>
+      <div class="outer_flex">
+        <div class="inner_flex">
+          <div class="text">
+            Enter total applicable deductions
+          </div>
+          <div class="svg1">
+            <img src="asset/questionmark.svg" alt="">
+            <span class="tooltip">Total applicable deductions encompass eligible expenses or allowances deducted from
+              your gross annual income</span>
+          </div>
+        </div>
+        <div class="input">
+          <input type="text" name="" id="deduction" placeholder="Enter total applicable deductions">
+          <div class="error">
+            <img src="asset/Error.svg" alt="" id="d-err">
+            <span class="tooltip" id="d-tt">Please enter numbers only</span>
+          </div>
+        </div>
+      </div>
+      <div class="submit">
+        <button id="button">Submit</button>
+      </div>
+    </div>
+    <div id="cnt-two">
+      <div class="show-cnt">
+        <div class="text2">
+          <div class="big">Your Overall income will be</div>
+          <div id="medium">12,00,000</div>
+          <div class="small">after tax deduction</div>
+        </div>
+        <div class="close">
+          <button id="close">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
