@@ -79,7 +79,7 @@ function calculate() {
           //handling deduction amount more than gross annual Income error
           if (GIvalue < DIvalue) {
             DIerr.style.visibility = "visible";
-            DItt.innerHTML = "Error:- Deduction can't me more than annual income";
+            DItt.innerHTML = "Error:- Deduction can't be more than annual income";
           }
           else {
             DIerr.style.visibility = "hidden";
