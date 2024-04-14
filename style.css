@@ -1,60 +1,66 @@
-body{
+body {
   overflow: hidden;
 }
-#main{
-  width: 100vw;
-  height: 100vh;
+#main {
+  width: 80vw;
+  height: 160vh;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  margin: auto;
 }
-p{
+p {
   text-align: center;
   justify-content: center;
-  margin-top: 60px;
-  margin-bottom: -60px;
+  /* margin-top: 60px; */
+  margin: auto;
+  /* margin-bottom: -60px; */
   font-size: 55px;
-  font-family:"DM Serif Display", serif;
+  font-family: "DM Serif Display", serif;
 }
-#cnt-one{
+#cnt-one {
   position: relative;
   padding: 70px 45px 40px;
   margin: auto;
   border: 3px solid rgba(106, 105, 105, 0.37);
 }
-.inner_flex .text{
+.inner_flex .text {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
-.inner_flex{
+.inner_flex {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 2px;
 }
 
-.outer_flex{
+.outer_flex {
   display: flex;
   flex-direction: column;
   margin-bottom: 11px;
 }
-.input input,select{
+.input input,
+select {
   width: 300px;
   padding: 7px;
   border: 2px solid rgba(106, 105, 105, 0.37);
   border-radius: 5px;
-  color:rgb(0, 0, 0) ;
+  color: rgb(0, 0, 0);
   font-size: 14px;
 }
 
-select{width: 317px;}
+select {
+  width: 317px;
+}
 
-.input input::placeholder{
+.input input::placeholder {
   color: rgba(106, 105, 105, 0.541);
   font-family: "Roboto", sans-serif;
 }
-.submit #button{
-  width: 316px;
+.submit #button {
+  width: 100%;
   margin-top: 35px;
   padding: 10px;
   border: none;
@@ -64,27 +70,27 @@ select{width: 317px;}
   font-size: 17px;
   border-radius: 5px;
 }
-.submit #button:hover{
+.submit #button:hover {
   background-color: #5142fb;
   cursor: pointer;
 }
-.submit #button:active{
+.submit #button:active {
   background-color: #463e9c;
   cursor: pointer;
 }
-.svg1{
+.svg1 {
   position: relative;
   position: relative;
   display: flex;
   align-items: center;
 }
-.svg1 .tooltip{
+.svg1 .tooltip {
   visibility: hidden;
   width: 130px;
   background-color: black;
   color: #fff;
   border-radius: 6px;
-  padding: 7px ;
+  padding: 7px;
   position: absolute;
   z-index: 1;
   bottom: 130%;
@@ -105,22 +111,22 @@ select{width: 317px;}
 .svg1:hover .tooltip {
   visibility: visible;
 }
-.input{
+.input {
   position: relative;
 }
-.input .error{
+.input .error {
   position: absolute;
-  right:5px;
-  top:20%;
+  right: 5px;
+  top: 20%;
   visibility: hidden;
 }
-.error .tooltip{
+.error .tooltip {
   visibility: hidden;
   width: 180px;
   background-color: black;
   color: #fff;
   border-radius: 6px;
-  padding: 7px ;
+  padding: 7px;
   position: absolute;
   z-index: 1;
   bottom: 115%;
@@ -141,19 +147,19 @@ select{width: 317px;}
 .error:hover .tooltip {
   visibility: visible;
 }
-.input .age-error{
+.input .age-error {
   position: absolute;
-  right:20px;
-  top:20%;
+  right: 20px;
+  top: 20%;
   visibility: hidden;
 }
-.age-error .age-tooltip{
+.age-error .age-tooltip {
   visibility: hidden;
   width: 180px;
   background-color: black;
   color: #fff;
   border-radius: 6px;
-  padding: 7px ;
+  padding: 7px;
   position: absolute;
   z-index: 1;
   bottom: 115%;
@@ -175,55 +181,143 @@ select{width: 317px;}
   visibility: visible;
 }
 
-
-#cnt-two{
+#cnt-two {
   visibility: hidden;
-  position: absolute;
-  top: 34vh;
-  left: 33.5%;
+  position: relative;
+  /* top: 34vh;
+  left: 33.5%; */
+  bottom: 65vh;
   background-color: white;
   width: 500px;
   height: 346px;
   border: 2px solid black;
+  margin: auto;
 }
-.text2{
+.text2 {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 3px;
-  font-family:  "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
-.show-cnt{
+.show-cnt {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   height: 100%;
 }
-.close button{
+.close button {
   background-color: #6559f5;
   padding: 10px;
   color: white;
   border: none;
   border-radius: 5px;
   font-size: 17px;
-  width:100px;
+  width: 100px;
 }
-.close button:hover{
+.close button:hover {
   background-color: #5142fb;
   cursor: pointer;
 }
-.close button:active{
+.close button:active {
   background-color: #463e9c;
   cursor: pointer;
 }
-.big{
+.big {
   font-size: 30px;
 }
-.small{
- font-size: 16px;
+.small {
+  font-size: 16px;
 }
-#medium{
+#medium {
   font-size: 21px;
+}
+@media screen and (max-width: 765px) {
+  #main {
+    width: 95vw;
+    height: 160vh;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  #cnt-two {
+    bottom: 62vh;
+  }
+}
+@media screen and (min-height: 1000px) {
+  #cnt-two {
+    bottom: 62vh;
+  }
+}
+@media screen and (min-height: 650px) {
+  #cnt-two {
+    width: 500px;
+    height: 350px;
+    bottom: 68vh;
+  }
+}
+@media screen and (min-height: 900px) {
+  #cnt-two {
+    bottom: 63vh;
+  }
+}
+@media screen and (min-height: 1200px) {
+  #cnt-two {
+    bottom: 60vh;
+  }
+}
+@media screen and (max-height: 650px) {
+  #cnt-one {
+    padding: 30px 45px;
+  }
+  p {
+    font-size: 45px;
+  }
+  #cnt-two {
+    width: 500px;
+    height: 310px;
+    bottom: 73vh;
+  }
+}
+@media screen and (max-height: 480px) {
+  #cnt-one {
+    padding: 15px 45px;
+  }
+  .submit #button {
+    margin-top: 10px;
+    padding: 5px;
+  }
+  .input input,
+  select {
+    padding: 4px;
+    font-size: 11px;
+  }
+  p {
+    font-size: 35px;
+  }
+  #cnt-two {
+    width: 450px;
+    height: 280px;
+    bottom: 68vh;
+  }
+}
+@media screen and (max-width: 500px) {
+  #main {
+    width: 150vw;
+    height: 220vh;
+  }
+  #cnt-two {
+    bottom: 86vh;
+  }
+}
+@media screen and (max-width: 625px) {
+  #main {
+    width: 120vw;
+    height: 180vh;
+  }
+  #cnt-two {
+    bottom: 72vh;
+  }
 }
